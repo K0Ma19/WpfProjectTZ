@@ -6,4 +6,52 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Image\account-box.png" />
+    <None Remove="Image\account-group.png" />
+    <None Remove="Image\account-minus.png" />
+    <None Remove="Image\account-multiple-plus.png" />
+    <None Remove="Image\account-network-outline.png" />
+    <None Remove="Image\account.png" />
+    <None Remove="Image\apache-kafka.png" />
+    <None Remove="Image\application-export.png" />
+    <None Remove="Image\application-import.png" />
+    <None Remove="Image\bell.png" />
+    <None Remove="Image\book-open-blank-variant.png" />
+    <None Remove="Image\calendar.png" />
+    <None Remove="Image\cog-box.png" />
+    <None Remove="Image\draw.png" />
+    <None Remove="Image\exit-to-app.png" />
+    <None Remove="Image\help.png" />
+    <None Remove="Image\magnify.png" />
+    <None Remove="Image\reload.png" />
+    <None Remove="Image\save.png" />
+    <None Remove="Image\shield-crown.png" />
+    <None Remove="Image\sitemap.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\account-box.png" />
+    <Resource Include="Image\account-group.png" />
+    <Resource Include="Image\account-minus.png" />
+    <Resource Include="Image\account-multiple-plus.png" />
+    <Resource Include="Image\account-network-outline.png" />
+    <Resource Include="Image\account.png" />
+    <Resource Include="Image\apache-kafka.png" />
+    <Resource Include="Image\application-export.png" />
+    <Resource Include="Image\application-import.png" />
+    <Resource Include="Image\bell.png" />
+    <Resource Include="Image\book-open-blank-variant.png" />
+    <Resource Include="Image\calendar.png" />
+    <Resource Include="Image\cog-box.png" />
+    <Resource Include="Image\draw.png" />
+    <Resource Include="Image\exit-to-app.png" />
+    <Resource Include="Image\help.png" />
+    <Resource Include="Image\magnify.png" />
+    <Resource Include="Image\reload.png" />
+    <Resource Include="Image\save.png" />
+    <Resource Include="Image\shield-crown.png" />
+    <Resource Include="Image\sitemap.png" />
+  </ItemGroup>
+
 </Project>

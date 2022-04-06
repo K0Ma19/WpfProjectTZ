@@ -5,8 +5,308 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfProjectTZ"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Администратор" MinHeight="700" MinWidth="1050" Background="#F0F0F0">
+    <Window.Resources>
+        <Style x:Key="CommonButton" TargetType="Button">
+            <Setter Property="Background" Value="#FAFAFA"/>
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+        </Style>
+        <Style x:Key="BrowseButton" TargetType="Button" BasedOn="{StaticResource CommonButton}">
+            <Setter Property="Content" Value="..."/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Background" Value="#FCFCFC"/>
+        </Style>
+        <Style x:Key="SectionButton" TargetType="Button">
+            <Setter Property="Height" Value="65"/>
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <Style x:Key="SectionButtonIcon" TargetType="Image">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="35"/>
+        </Style>
+        <Style x:Key="StyleLable" TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+        <Style x:Key="StyleTextBox" TargetType="TextBox">
+            <Setter Property="Margin" Value="0 2 0 2"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+        <Style x:Key="MainButton" TargetType="Button" BasedOn="{StaticResource CommonButton}">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource MainButton}">
+                    <Button.Content>
+                        <Image Source="Image\save.png" />
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource MainButton}">
+                    <Button.Content>
+                        <Image Source="Image\reload.png"/>
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource MainButton}">
+                    <Button.Content>
+                        <Image Source="Image\exit-to-app.png"/>
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource MainButton}">
+                    <Button.Content>
+                        <Image Source="Image\help.png"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+            <Border BorderBrush="#969AA1" BorderThickness="1" Grid.Row="1">
+                <ScrollViewer Background="White">
+                    <StackPanel>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\account.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Сотрудники"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\sitemap.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Подразделение" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\account-group.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Группы" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\apache-kafka.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Потоки и маршруты"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\book-open-blank-variant.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Спавочник" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\cog-box.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Конфигурация" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\account-network-outline.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Работающие сотрудники"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\bell.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Настройка уведомлений"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\draw.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Электронная подпись"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\application-import.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Автоипортер"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
+                                    <Image Source="Image\application-export.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Автоэкспортер"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "30"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox  Grid.Row="0" Margin="10 5 10 0" Style="{StaticResource StyleTextBox}"/>
+            <DataGrid Grid.Row="1" Margin="10 5 10 0"/>
+            <TabControl Grid.Row="2" Margin="10 5 10 0" Background="#F2F2F2">
+                <TabItem Header="Общее" Background="#FAFAFA">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <GroupBox Header="Личные данные" Grid.Column="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Content="Фамилия:" Grid.Column="1" Grid.Row="0" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="2" Grid.Row="0" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Имя:" Grid.Column="1" Grid.Row="1" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Отчество:" Grid.Column="1" Grid.Row="2" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="2" Grid.Row="2" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Системное имя:" Grid.Column="0" Grid.Row="3" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Позиция:" Grid.Column="0" Grid.Row="4" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Комната:" Grid.Column="0" Grid.Row="5" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Телефоны:" Grid.Column="0" Grid.Row="6" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content ="Факс:" Grid.Column="0" Grid.Row="7" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Электронная почта:" Grid.Column="0" Grid.Row="8" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
+                                <Label Content="Примечание:" Grid.Column="0" Grid.Row="9" Style="{StaticResource StyleLable}"/>
+                                    <TextBox Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
+                                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
+                                    <Button Style="{StaticResource BrowseButton}"/>
+                                    <Border>
+                                        <Image/>
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel  Grid.Column="2" Grid.Row="11">
+                                    <CheckBox Content="Именованная лицензия"/>
+                                </StackPanel>
+                            </Grid>
+                        </GroupBox>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Особые полномочия" Grid.Row="0">
+                                <StackPanel>
+                                    <CheckBox Content="Администрирвоание комплекса"/>
+                                    <CheckBox Content="Администрирование документооборота"/>
+                                    <CheckBox Content="Делопроизводитель"/>
+                                    <CheckBox Content="Контроль исполнения заданий"/>
+                                    <CheckBox Content="Расширенный контроль"/>
+                                    <CheckBox Content="Создание регистрационных форм"/>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="Конфигурация рабочего места" Grid.Row="1">
+                                <Border Background="White">
+                                    <CheckBox Content="Локальная конфигурация (по умолчанию)"/>
+                                </Border>
+                            </GroupBox>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Является уполномоченным для:" Grid.Row="0">
+                                <TextBox/>
+                            </GroupBox>
+                            <GroupBox Header="Является заместителем для:" Grid.Row="1">
+                                <DataGrid>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="    "/>
+                                        <DataGridTextColumn Header="Сотрудник" Width="100"/>
+                                        <DataGridTextColumn Header="Дата начала" Width="100"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </GroupBox>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Подразделения"/>
+                <TabItem Header="Наборы прав доступа"/>
+            </TabControl>
+        </Grid>
+        <Grid Grid.Column="2">
+            <StackPanel >
+                <Button Style="{StaticResource MainButton}" Height="30" Width="30" Margin="5">
+                    <Button.Content>
+                        <StackPanel>
+                            <Image Source="Image\magnify.png" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Margin="0 20 0 0" Style="{StaticResource MainButton}" Height="30" Width="30">
+                    <Button.Content>
+                        <StackPanel>
+                            <Image Source="Image\account-multiple-plus.png" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Margin="5" Style="{StaticResource MainButton}" Height="30" Width="30">
+                    <Button.Content>
+                        <StackPanel>
+                            <Image Source="Image\account-minus.png" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
