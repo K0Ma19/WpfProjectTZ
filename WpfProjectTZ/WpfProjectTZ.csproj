@@ -20,6 +20,7 @@
     <None Remove="Image\book-open-blank-variant.png" />
     <None Remove="Image\calendar.png" />
     <None Remove="Image\cog-box.png" />
+    <None Remove="Image\desktop-classic.png" />
     <None Remove="Image\draw.png" />
     <None Remove="Image\exit-to-app.png" />
     <None Remove="Image\help.png" />
@@ -44,6 +45,7 @@
     <Resource Include="Image\book-open-blank-variant.png" />
     <Resource Include="Image\calendar.png" />
     <Resource Include="Image\cog-box.png" />
+    <Resource Include="Image\desktop-classic.png" />
     <Resource Include="Image\draw.png" />
     <Resource Include="Image\exit-to-app.png" />
     <Resource Include="Image\help.png" />
