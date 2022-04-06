@@ -115,7 +115,7 @@
                             <Button.Content>
                                 <StackPanel>
                                     <Image Source="Image\book-open-blank-variant.png" Style="{StaticResource SectionButtonIcon}"/>
-                                    <TextBlock Text="Спавочник" TextAlignment="Center"/>
+                                    <TextBlock Text="Справочник" TextAlignment="Center"/>
                                 </StackPanel>
                             </Button.Content>
                         </Button>
@@ -146,6 +146,14 @@
                         <Button Style="{StaticResource SectionButton}">
                             <Button.Content>
                                 <StackPanel>
+                                    <Image Source="Image\calendar.png" Style="{StaticResource SectionButtonIcon}"/>
+                                    <TextBlock Text="Календарь системы"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{StaticResource SectionButton}">
+                            <Button.Content>
+                                <StackPanel>
                                     <Image Source="Image\draw.png" Style="{StaticResource SectionButtonIcon}"/>
                                     <TextBlock Text="Электронная подпись"  TextWrapping="Wrap" TextAlignment="Center"/>
                                 </StackPanel>
@@ -155,7 +163,7 @@
                             <Button.Content>
                                 <StackPanel>
                                     <Image Source="Image\application-import.png" Style="{StaticResource SectionButtonIcon}"/>
-                                    <TextBlock Text="Автоипортер"  TextWrapping="Wrap" TextAlignment="Center"/>
+                                    <TextBlock Text="Автоимпортер"  TextWrapping="Wrap" TextAlignment="Center"/>
                                 </StackPanel>
                             </Button.Content>
                         </Button>
@@ -229,8 +237,8 @@
                                     <TextBox Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Style="{StaticResource StyleTextBox}"/>
                                 <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
                                     <Button Style="{StaticResource BrowseButton}"/>
-                                    <Border>
-                                        <Image/>
+                                    <Border BorderBrush="LightGray" BorderThickness="2" Width="80" Margin="2">
+                                        <Image x:Name="MeinAccountImage" Source="Image\account-box.png"/>
                                     </Border>
                                 </StackPanel>
                                 <StackPanel  Grid.Column="2" Grid.Row="11">
@@ -245,7 +253,7 @@
                             </Grid.RowDefinitions>
                             <GroupBox Header="Особые полномочия" Grid.Row="0">
                                 <StackPanel>
-                                    <CheckBox Content="Администрирвоание комплекса"/>
+                                    <CheckBox Content="Администрирование комплекса"/>
                                     <CheckBox Content="Администрирование документооборота"/>
                                     <CheckBox Content="Делопроизводитель"/>
                                     <CheckBox Content="Контроль исполнения заданий"/>
